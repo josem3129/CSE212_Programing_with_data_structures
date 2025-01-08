@@ -13,7 +13,19 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        return []; // replace this return statement with your own
+        // 1st Initialize the array
+        double[] result = new double[length];
+        int multiplyBy = 1;
+
+        // 2nd Create a loop to multiply the given number
+        for (int i = 0; i < length; i++)
+        {
+            // 3rd Each time the loop runs, multiply the given number by 'multiplyBy' and store the result
+            result[i] = number * multiplyBy++;
+        }
+
+        
+        return result; // replace this return statement with your own
     }
 
     /// <summary>
@@ -29,5 +41,21 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+
+
+        // 1st step: Split the list into two parts
+        List<int> firstPart = data.GetRange(data.Count - amount, amount);
+        List<int> secondPart = data.GetRange(0, data.Count - amount);
+
+        // 2nd step: Add the second part into the first part
+        firstPart.AddRange(secondPart);
+
+        // 3rd step: Clear the original list and add the rearranged first part back to the original list
+        data.Clear();
+        data.AddRange(firstPart);
+
+
+        
+    
     }
 }
