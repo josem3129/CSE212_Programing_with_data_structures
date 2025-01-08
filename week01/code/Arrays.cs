@@ -43,14 +43,14 @@ public static class Arrays
         // be implemented by another person.
 
 
-        // 1st step: Split the list into two parts
+        // 1st Split the list into two parts
         List<int> firstPart = data.GetRange(data.Count - amount, amount);
         List<int> secondPart = data.GetRange(0, data.Count - amount);
 
-        // 2nd step: Add the second part into the first part
+        // 2nd Add the second part into the first part
         firstPart.AddRange(secondPart);
 
-        // 3rd step: Clear the original list and add the rearranged first part back to the original list
+        // 3rd Clear the original list and add the rearranged first part back to the original list
         data.Clear();
         data.AddRange(firstPart);
 
