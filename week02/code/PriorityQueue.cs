@@ -28,12 +28,13 @@
         {
             if (_queue[index].Priority >= _queue[highPriorityIndex].Priority){
 
-                if (_queue[index].Priority == _queue[highPriorityIndex].Priority)
+                if (_queue[index].Priority != _queue[highPriorityIndex].Priority)
                     highPriorityIndex = index;
             }
         }
 
-        // Remove and return the item with the highest priority
+        // Remove and return the item with the highest priorityasdfghjkl
+        
         var value = _queue[highPriorityIndex].Value;
         return value;
     }

@@ -51,4 +51,36 @@ public class PriorityQueueTests
     }
 
     // Add more test cases as needed below.
+
+    
+    [TestMethod]
+    // Scenario: Create a queue with the following items and priorities: Item1 (1), Item2 (3), Item3 (3) and find the item with the highest priority from repeated priorities
+    // Expected Result: Item2
+    // Defect(s) Found: 
+    public void TestPriorityQueue_3()
+    {
+        
+        // var expectedItem = "The queue is empty.";
+
+        var priorityQueue = new PriorityQueue();
+        
+        
+
+        try
+        {
+        var priorityItem = priorityQueue.Dequeue();
+            Assert.Fail("The queue is empty.");
+        }
+        catch (InvalidOperationException e)
+        {
+            Assert.AreEqual("The queue is empty.", e.Message);
+        }
+        catch (AssertFailedException)
+        {
+            throw;
+        }
+        
+    }
+
+    // Add more test cases as needed below.
 }
