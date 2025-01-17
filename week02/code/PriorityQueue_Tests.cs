@@ -31,7 +31,7 @@ public class PriorityQueueTests
     [TestMethod]
     // Scenario: Create a queue with the following items and priorities: Item1 (1), Item2 (3), Item3 (3) and find the item with the highest priority from repeated priorities
     // Expected Result: Item2
-    // Defect(s) Found: 
+    // Defect(s) Found: Found that Dequede method was not working as expected. it was not saving the first saved item in the queue. Changed the Dequeue method to save the first saved item in the queue.
     public void TestPriorityQueue_2()
     {
         var item1 = new PriorityItem("Item1", 1);
@@ -54,9 +54,9 @@ public class PriorityQueueTests
 
     
     [TestMethod]
-    // Scenario: Create a queue with the following items and priorities: Item1 (1), Item2 (3), Item3 (3) and find the item with the highest priority from repeated priorities
-    // Expected Result: Item2
-    // Defect(s) Found: 
+    // Scenario: Create an empty queue to run and trigger the exception
+    // Expected Result: The queue is empty
+    // Defect(s) Found: Test had to try to find que to be empty and throw an exception. Changed the test to throw an exception when the queue is empty.
     public void TestPriorityQueue_3()
     {
         
