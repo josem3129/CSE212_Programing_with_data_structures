@@ -25,6 +25,8 @@
     private static int CountDuplicates(int[] data)
     {
         // Add code here.
-        return 0;
+        var unique = new HashSet<int>(data);
+        Console.WriteLine($"Number of unique items in the collection: {unique}");
+        return data.Length - unique.Count;
     }
 }
